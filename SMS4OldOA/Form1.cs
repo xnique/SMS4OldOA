@@ -108,6 +108,7 @@ namespace SMS4OldOA
                 }
                 catch(Exception ex)
                 {
+					//记录错误信息
                     setTextBox(ex.ToString(), "");
                 }
             }
