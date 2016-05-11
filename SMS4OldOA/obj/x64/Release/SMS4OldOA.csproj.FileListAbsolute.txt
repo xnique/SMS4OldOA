@@ -1,0 +1,27 @@
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.exe.config
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.exe.manifest
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.application
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.exe
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.pdb
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.Form1.resources
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.Properties.Resources.resources
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.csproj.GenerateResource.Cache
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.exe.manifest
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.application
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.exe
+e:\Desktop\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.pdb
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.exe.config
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.exe.manifest
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.application
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.exe
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.pdb
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.Form1.resources
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.Properties.Resources.resources
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.exe.manifest
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.application
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.exe
+C:\Users\Administrator\Desktop\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.pdb
+C:\Users\vip\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\x64\Release\SMS4OldOA.exe.config
+C:\Users\vip\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.exe
+C:\Users\vip\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\x64\Release\SMS4OldOA.pdb

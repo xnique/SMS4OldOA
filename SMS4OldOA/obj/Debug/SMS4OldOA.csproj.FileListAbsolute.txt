@@ -1,0 +1,9 @@
+e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\Debug\SMS4OldOA.exe.config
+e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\Debug\SMS4OldOA.exe
+e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\Debug\SMS4OldOA.pdb
+e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.csprojResolveAssemblyReference.cache
+e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.Form1.resources
+e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.Properties.Resources.resources
+e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.csproj.GenerateResource.Cache
+e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.exe
+e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.pdb

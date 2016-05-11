@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://sms.sysif.touch.com/api" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://sms.sysif.touch.com/api/model" xmlns:impl="http://sms.sysif.touch.com/api" targetNamespace="http://sms.sysif.touch.com/api" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://sms.sysif.touch.com/api/model">
+      <xsd:import namespace="http://sms.sysif.touch.com/api" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="SmsMessage">
+        <xsd:sequence>
+          <xsd:element name="batchId" nillable="true" type="xsd:string" />
+          <xsd:element name="content" nillable="true" type="xsd:string" />
+          <xsd:element name="destAddr" nillable="true" type="xsd:string" />
+          <xsd:element name="reqReport" nillable="true" type="xsd:boolean" />
+          <xsd:element name="sendTime" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="smsParam" nillable="true" type="xsd:string" />
+          <xsd:element name="sourceAddr" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SubSmsMessage">
+        <xsd:sequence>
+          <xsd:element name="batchId" nillable="true" type="xsd:string" />
+          <xsd:element name="content" nillable="true" type="xsd:string" />
+          <xsd:element name="destAddr" nillable="true" type="xsd:string" />
+          <xsd:element name="pkNumber" nillable="true" type="xsd:short" />
+          <xsd:element name="pkTotal" nillable="true" type="xsd:short" />
+          <xsd:element name="sourceAddr" nillable="true" type="xsd:string" />
+          <xsd:element name="statusCode" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SmsReport">
+        <xsd:sequence>
+          <xsd:element name="batchId" nillable="true" type="xsd:string" />
+          <xsd:element name="destAddr" nillable="true" type="xsd:string" />
+          <xsd:element name="message" nillable="true" type="impl:ArrayOf_tns1_SubSmsMessage" />
+          <xsd:element name="receivedTime" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="sourceAddr" nillable="true" type="xsd:string" />
+          <xsd:element name="statusCode" type="xsd:int" />
+          <xsd:element name="statusText" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://sms.sysif.touch.com/api">
+      <xsd:import namespace="http://sms.sysif.touch.com/api/model" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_tns1_SmsMessage">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:SmsMessage[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_SubSmsMessage">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:SubSmsMessage[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_SmsReport">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:SmsReport[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getSmsMessageResponse">
+    <wsdl:part name="getSmsMessageReturn" type="impl:ArrayOf_tns1_SmsMessage" />
+  </wsdl:message>
+  <wsdl:message name="sendResponse">
+    <wsdl:part name="sendReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="activeTestRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="batchSendRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="messages" type="impl:ArrayOf_tns1_SmsMessage" />
+  </wsdl:message>
+  <wsdl:message name="deliverSmsReportsResponse" />
+  <wsdl:message name="getSmsReportsResponse">
+    <wsdl:part name="getSmsReportsReturn" type="impl:ArrayOf_tns1_SmsReport" />
+  </wsdl:message>
+  <wsdl:message name="getSmsReportsRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="batchId" type="xsd:string" />
+    <wsdl:part name="destAddr" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="batchSendResponse">
+    <wsdl:part name="batchSendReturn" type="impl:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="activeTestResponse" />
+  <wsdl:message name="deliverSmsMessageResponse" />
+  <wsdl:message name="deliverSmsMessageRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="messages" type="impl:ArrayOf_tns1_SmsMessage" />
+  </wsdl:message>
+  <wsdl:message name="sendRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="message" type="tns1:SmsMessage" />
+  </wsdl:message>
+  <wsdl:message name="deliverSmsReportsRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="batchId" type="xsd:string" />
+    <wsdl:part name="reports" type="impl:ArrayOf_tns1_SmsReport" />
+  </wsdl:message>
+  <wsdl:message name="getSmsMessageRequest">
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="SmsMessageService">
+    <wsdl:operation name="send" parameterOrder="username password message">
+      <wsdl:input name="sendRequest" message="impl:sendRequest" />
+      <wsdl:output name="sendResponse" message="impl:sendResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="batchSend" parameterOrder="username password messages">
+      <wsdl:input name="batchSendRequest" message="impl:batchSendRequest" />
+      <wsdl:output name="batchSendResponse" message="impl:batchSendResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSmsReports" parameterOrder="username password batchId destAddr">
+      <wsdl:input name="getSmsReportsRequest" message="impl:getSmsReportsRequest" />
+      <wsdl:output name="getSmsReportsResponse" message="impl:getSmsReportsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSmsMessage" parameterOrder="username password">
+      <wsdl:input name="getSmsMessageRequest" message="impl:getSmsMessageRequest" />
+      <wsdl:output name="getSmsMessageResponse" message="impl:getSmsMessageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deliverSmsMessage" parameterOrder="username password messages">
+      <wsdl:input name="deliverSmsMessageRequest" message="impl:deliverSmsMessageRequest" />
+      <wsdl:output name="deliverSmsMessageResponse" message="impl:deliverSmsMessageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deliverSmsReports" parameterOrder="username password batchId reports">
+      <wsdl:input name="deliverSmsReportsRequest" message="impl:deliverSmsReportsRequest" />
+      <wsdl:output name="deliverSmsReportsResponse" message="impl:deliverSmsReportsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="activeTest" parameterOrder="username password">
+      <wsdl:input name="activeTestRequest" message="impl:activeTestRequest" />
+      <wsdl:output name="activeTestResponse" message="impl:activeTestResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SmsMessageServiceSoapBinding" type="impl:SmsMessageService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="send">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sendRequest">
+        <wsdlsoap:body use="encoded" namespace="http://api.sms.sysif.touch.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="sendResponse">
+        <wsdlsoap:body use="encoded" namespace="http://sms.sysif.touch.com/api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="batchSend">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="batchSendRequest">
+        <wsdlsoap:body use="encoded" namespace="http://api.sms.sysif.touch.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="batchSendResponse">
+        <wsdlsoap:body use="encoded" namespace="http://sms.sysif.touch.com/api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSmsReports">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getSmsReportsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://api.sms.sysif.touch.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getSmsReportsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://sms.sysif.touch.com/api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSmsMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getSmsMessageRequest">
+        <wsdlsoap:body use="encoded" namespace="http://api.sms.sysif.touch.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getSmsMessageResponse">
+        <wsdlsoap:body use="encoded" namespace="http://sms.sysif.touch.com/api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deliverSmsMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deliverSmsMessageRequest">
+        <wsdlsoap:body use="encoded" namespace="http://api.sms.sysif.touch.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="deliverSmsMessageResponse">
+        <wsdlsoap:body use="encoded" namespace="http://sms.sysif.touch.com/api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deliverSmsReports">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deliverSmsReportsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://api.sms.sysif.touch.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="deliverSmsReportsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://sms.sysif.touch.com/api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activeTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="activeTestRequest">
+        <wsdlsoap:body use="encoded" namespace="http://api.sms.sysif.touch.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="activeTestResponse">
+        <wsdlsoap:body use="encoded" namespace="http://sms.sysif.touch.com/api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SmsMessageServiceService">
+    <wsdl:port name="SmsMessageService" binding="impl:SmsMessageServiceSoapBinding">
+      <wsdlsoap:address location="http://202.120.199.225:8082/api/services/SmsMessageService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
