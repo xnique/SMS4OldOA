@@ -82,6 +82,7 @@ namespace SMS4OldOA
         {
             while(true)
             {
+                //防止数据库连接断开
                 try
                 {
                     if (quit) break;
