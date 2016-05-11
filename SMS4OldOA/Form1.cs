@@ -46,6 +46,7 @@ namespace SMS4OldOA
         private void button1_Click(object sender, EventArgs e)
         {
             TouchSMS.SmsMessage msg = new TouchSMS.SmsMessage();
+            //这是某个人的手机号码
             msg.destAddr = "18116286599";
             msg.content = "oa测试短信";
             string resp = SMSC.send(username, password, msg);

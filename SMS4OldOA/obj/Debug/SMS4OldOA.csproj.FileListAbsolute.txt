@@ -7,3 +7,6 @@ e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\S
 e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.csproj.GenerateResource.Cache
 e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.exe
 e:\desktop\documents\visual studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.pdb
+C:\Users\vip\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\bin\Debug\SMS4OldOA.exe.config
+C:\Users\vip\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.exe
+C:\Users\vip\Documents\Visual Studio 2015\Projects\SMS4OldOA\SMS4OldOA\obj\Debug\SMS4OldOA.pdb
