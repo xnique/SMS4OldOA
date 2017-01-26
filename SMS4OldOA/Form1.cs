@@ -37,10 +37,10 @@ namespace SMS4OldOA
             InitializeComponent();
             button3.Enabled = quit;
             button4.Enabled = !quit;
-            
+
             cmd.CommandText = "select sms_id,content,cell_no from tbl_ad_sms where sms_id>20886182 and scan_flag is null";
-            
-            //cmd1.CommandText = 
+
+            //cmd1.CommandText =
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace SMS4OldOA
             TouchSMS.SmsReport[] reports = SMSC.getSmsReports(username, password, textBox3.Text, textBox4.Text);
             if (reports.Length>0) textBox1.AppendText(reports[0].statusCode.ToString() + "\r\n");
             //textBox1.Text = DateTime.Now.ToString();
-            
+
         }
 
         private void setTextBox(string text,string text2)
